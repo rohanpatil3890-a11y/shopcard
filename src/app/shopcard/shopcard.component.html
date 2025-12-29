@@ -1,0 +1,31 @@
+
+<div class="">
+
+
+    <div class="row m-0 mt-5">
+        <div *ngFor="let shop of product" class="col-md-3 mb-4">
+            <mat-card class="example-card">
+
+                <span
+                    class=" font-weight-bold bg-danger text-white font-waight-bold p-2 rounded-lg">{{shop.discountPercentage}}%
+                    Off</span>
+
+                <img mat-card-image [src]="shop.images[0]">
+                <mat-card-title class="Shop-title">{{shop.title}}</mat-card-title>
+
+                <mat-card-subtitle class="d-flex justify-content-between align-items-center">
+                    <strong class="font_waight">$ : {{shop.price}}</strong> <strong>Catg : {{shop.category}}</strong>
+
+                </mat-card-subtitle>
+                <mat-card-content>
+                    <span
+                        class=" font-weight-bold p-2  rounded-lg alert alert-success text-bold">{{shop.availabilityStatus}}</span>
+                </mat-card-content>
+                <mat-card-actions class="d-flex justify-content-between">
+                    <button mat-stroked-button color="primary">Add To Cart</button>
+                    <button mat-raised-button color="accent">Buy</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div> 
